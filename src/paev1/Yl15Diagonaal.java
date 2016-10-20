@@ -1,6 +1,6 @@
-package paev_1;
+package paev1;
 
-public class Diagonaal {
+public class Yl15Diagonaal {
 	public static void main(String[] args) {
 		
 		//Alustada lahendamist väiksemast tabelist NT 3x3.

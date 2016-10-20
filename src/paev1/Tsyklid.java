@@ -1,4 +1,4 @@
-package paev_1;
+package paev1;
 
 public class Tsyklid {
 	public static void main(String[] args) {

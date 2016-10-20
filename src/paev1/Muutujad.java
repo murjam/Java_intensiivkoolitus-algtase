@@ -1,4 +1,4 @@
-package paev_1;
+package paev1;
 
 public class Muutujad {
 	public static void main(String[] args) {

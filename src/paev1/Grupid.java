@@ -1,4 +1,4 @@
-package paev_1;
+package paev1;
 
 import lib.TextIO;
 import paev2.Yl1ArvuTabel;

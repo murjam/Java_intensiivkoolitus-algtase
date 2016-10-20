@@ -1,6 +1,6 @@
-package paev_1;
+package paev1;
 
-public class KymmeKuniYks {
+public class Yl13KymmeKuniYks {
 	public static void main(String[] args) {
 		
 //		for (int i = 0; i < 10; i++) {
