@@ -1,6 +1,6 @@
 package paev1;
 
-public class Muutujad {
+public class Osa4_Muutujad {
 	public static void main(String[] args) {
 		
 		int arv = -2;  //Muutuja, ta väärtust saab muuta.
