@@ -5,7 +5,9 @@ import java.util.Collections;
 
 import lib.TextIO;
 
-public class ArvudJarjest {
+//Kirjutada programm, mis küsib kasutaja käest 3 reaalarvu ning trükib need välja sorteeritult (kasvavalt).
+//Meetod, mis sorteerib ArrayList-i: Collections.sort().
+public class Yl1_SorteeritudArvud {
 	
 	//Teha ise sorteerimise algoritm. Näpuharjutus.
 	public static void sort(ArrayList<Integer> arvud)
@@ -18,13 +20,13 @@ public class ArvudJarjest {
 	
 	public static void main(String[] args) {
 		
-		//------ Mite objektorienteeritud kood -----
+//		//------ Mite objektorienteeritud kood -----
 		int mitu = 3;
 		
-		ArrayList<Sportlane> sportlased = new ArrayList<>();
+		ArrayList<Yl2_Sportlased> sportlased = new ArrayList<>();
 		
 		for (int i = 0; i < mitu; i++) {
-			Sportlane sportlane = new Sportlane(nimi, tulemus);
+			Yl2_Sportlased sportlane = new Yl2_Sportlased(nimi, tulemus);
 			System.out.println("Nimi: ");
 			sportlane.nimi = TextIO.getlnString();
 			System.out.println(sportlane.nimi + " heitis ketast: ");
@@ -36,12 +38,11 @@ public class ArvudJarjest {
 		Collections.sort(sportlased);;
 		
 		//Välja trükkimine.
-		for (Sportlane sportlane : sportlased) {
+		for (Yl2_Sportlased sportlane : sportlased) {
 			System.out.println(sportlane);
 		}
-	}
-	
-	//------ Mite nii objektorienteeritud kood -----
+		
+		//------ Mite nii objektorienteeritud kood -----
 //		System.out.println("Sisesta palun " + mitu + " arvu");
 //		
 //		ArrayList<Double> arvud = new ArrayList<Double>();
@@ -58,3 +59,5 @@ public class ArvudJarjest {
 //			System.out.println(arv + " ");
 //		}
 	}
+
+}

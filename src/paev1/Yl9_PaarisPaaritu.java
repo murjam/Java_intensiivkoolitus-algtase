@@ -22,6 +22,7 @@ public class Yl9_PaarisPaaritu {
 		else {
 		    paarsus = "paaritu";
 		}
+		
 		System.out.format("Sisestatud arv on %s.\n", paarsus);
 		//----Teine lühem versioon, koos if-iga, milleks on + ?---//
 		System.out.format("Sisestatud arv on %s.", 0 == arv1 % 2 ? "paaris" : "paaritu");

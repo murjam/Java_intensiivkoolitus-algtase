@@ -1,5 +1,6 @@
 package paev1;
 
+//Trükkida ekraanile arve järjest.
 public class Yl13_KymmeKuniYks {
 	public static void main(String[] args) {
 		

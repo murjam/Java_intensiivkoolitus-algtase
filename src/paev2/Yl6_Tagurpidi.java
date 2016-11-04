@@ -5,20 +5,13 @@ import java.util.Collections;
 
 import lib.TextIO;
 
-public class Tagurpidi {
-
+//Kirjutada programm, mis küsib kasutajalt 10 või 5 arvu ning trükib nad seejärel 
+//vastupidises järjekorras ekraanile.
+public class Yl6_Tagurpidi {
 	public static void main(String[] args) {
 		
-		if (-1 != "mingi tekst".indexOf("s")) {
-			
-		}
-		if ("mingi tekst".contains("s")) {
-			
-		}
-		
-		
 		int count = 5;
-		System.out.format("Sisesta %d arvu:\n", count);
+		System.out.format("Sisesta %d arvu: \n", count);
 		
 		ArrayList<Integer> numbers = new ArrayList<Integer>();
 		
@@ -27,19 +20,12 @@ public class Tagurpidi {
 			numbers.add(number);
 		}
 		
-		System.out.println("Sisestatud arvud tagurpidi:");
-		
+		System.out.println("\nSisestatud arvud tagurpidi:");
 		Collections.reverse(numbers);
 		
+		//Foreach tsükliga trükime numbrid tagurpidi välja.
 		for (Integer number : numbers) {
-			System.out.println(number);
+			System.out.print(number + " ");
 		}
-		
-		
-//		for (int i = numbers.size() - 1; i >= 0; i--) {
-//			System.out.println(numbers.get(i));
-//		}
-		
 	}
-	
 }

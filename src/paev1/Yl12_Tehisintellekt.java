@@ -2,6 +2,11 @@ package paev1;
 
 import lib.TextIO;
 
+//Kirjutada programm, mis küsib kasutajalt kaks vanust.
+//Kui vanuste vahe jääb alla viie aasta, ütleb "sobib";
+//kui vanuste vahe on rohkem kui viis aastat, ütleb midagi krõbedat;
+//kui vanuste vahe on rohkem kui kümme aastat, ütleb midagi veel krõbedamat.
+//Programmi toimimine ei tohi sõltuda vanuste sisestamise järjekorrast!
 public class Yl12_Tehisintellekt {
 	public static void main(String[] args) {
 		

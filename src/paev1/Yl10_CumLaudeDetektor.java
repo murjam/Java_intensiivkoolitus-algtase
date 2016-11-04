@@ -12,6 +12,7 @@ public class Yl10_CumLaudeDetektor {
 		System.out.print("Sisesta kaalutud keskmine hinne: ");
 		double kaalutudKesk = TextIO.getlnDouble();
 		
+		//Veatöötlus ja veateade, meil vaja while, kuna asi peab tsüklisse jääma.
 		while (kaalutudKesk < 0 || kaalutudKesk > 5) {
 			System.out.print("Sisesta kaalutud keskmine hinne uuesti: ");
 			kaalutudKesk = TextIO.getlnDouble();
@@ -20,6 +21,7 @@ public class Yl10_CumLaudeDetektor {
 		System.out.print("Sisesta lõputöö hinne: ");
 		int l6putooHinne = TextIO.getlnInt();
 		
+		//Veatöötlus ja veateade, meil vaja while, kuna asi peab tsüklisse jääma.
 		while (l6putooHinne > 5 || l6putooHinne < 0) {
 			System.out.print("Sisesta lõputöö hinne uuesti: ");
 			l6putooHinne = TextIO.getlnInt();

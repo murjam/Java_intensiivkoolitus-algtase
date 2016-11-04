@@ -1,17 +1,21 @@
 package paev2;
 
-public class Yl1ArvuTabel {
+//Trükkida tsükleid kasutades ekraanile selline tabel.
+//(i)Jaga ülesanne väiksemateks osadeks: kõigepealt trüki välja esimene rida, 
+//siis korda seda rida 10x ning viimaks alles tee vajalikud muudatused, 
+//et lõpptulemust saavutada.
+public class Yl1_ArvuTabel {
+	
 	//Poilerplate kood, mille peame kirjutama.
 	//Programmeerimisel tuleb suur ülesanne algul lihtsamalt kirja panna.
-	//Staatiline - kuulub klassile, kui pole kuulub objektile
-	
+	//Staatiline - kuulub klassile, kui pole, kuulub objektile.
 	public static void main(String[] args) {    //String[] args - käsurealt käivitamiseks
 		trykiTabel(10,10);
 		System.out.println("Vahe");
 		trykiTabel(5,3);
 		System.out.println("Vahe2");
-		trykiTabel(100,2);  //Kasutan ära universaalsust,
-		System.out.println(mituAad("Tere, Mart ja Toomas."));
+		trykiTabel(20,2);  //Kasutan ära universaalsust.
+		System.out.println("Kokku on: " + mituAad("Tere, Mart ja Toomas."));
 	}
 	
 	public static int mituAad(String tekst) {
@@ -33,7 +37,6 @@ public class Yl1ArvuTabel {
 	public static void trykiTabel(int suurus, int alus) {
 		
 		// for (X; Y; Z) 
-		
 		// X - täidetakse 1x enne tsüklit
 		// Y - jätkamistingimus
 		// Z - täidetakse peale igat tsükli iteratsiooni
@@ -55,5 +58,4 @@ public class Yl1ArvuTabel {
 //		System.out.println(i);
 	}
 	
-
 }
