@@ -6,9 +6,7 @@ import lib.TextIO;
 //Kui kasutaja pakub väiksemat arvu, öelda, et arv on suurem ja vastupidi.
 //Mäng kestab, kuni kasutaja on arvu ära arvanud.
 public class Yl11_Arvamismang {
-	public static void main(String[] args) {
-		
-		int min = 1, max = 100;
+	public static int kasutajaSisestus(int min, int max) {
 		
 		int suvalineArv = (int) (Math.random() * (max - min + 1)) + min;
 		System.out.println(suvalineArv);
@@ -22,12 +20,17 @@ public class Yl11_Arvamismang {
 				System.out.println("Arvuti number on väiksem!");
 				minuSisestus = TextIO.getlnInt();
 			}
-
+			
 			else if (minuSisestus < suvalineArv) {
 				System.out.println("Arvuti number on suurem!");
 				minuSisestus = TextIO.getlnInt();
 			}
 		}
-		System.out.println("\nArvasid ära! \nArvuti number on " + suvalineArv);
+		return suvalineArv;
+	}
+	
+	public static void main(String[] args) {
+		
+		System.out.println("\nArvasid ära! \nArvuti number on " + kasutajaSisestus(1, 100));
 	}
 }

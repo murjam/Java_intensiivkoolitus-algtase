@@ -10,6 +10,12 @@ public class Yl12_KuulujutuGeneraator {
 		System.out.print("Kuulujutt järgmine: \n\n" + suvalineTulemus());
 	}
 	
+	//Suvalise elemendi leidmine massiivist
+	public static String suvaline(String[] naised, String[] mehed, String[] tegevus) 
+	{
+		return null;
+	}
+	
 	//(i)Pane tähele, et andmeelemendid nimede ja tegevuste jaoks on Stringide massiivid.
 	//Mõistlik oleks kirjutada üldine meetod, mis annab Stringi massiivist suvalise elemendi:
 	public static String suvalineTulemus() {

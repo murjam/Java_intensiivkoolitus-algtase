@@ -18,7 +18,6 @@ public class Yl3_KasutajaSisestus {
 			
 			if (min <= sisestus && sisestus <= max)  // <-- täida sobiliku tingimusega
 			{
-				// return väljub meetodist ja ka tsüklist
 				return sisestus;
 			}
 			System.out.format("Arv %d ei sobi, palun sisesta uuesti.\n\n", sisestus);

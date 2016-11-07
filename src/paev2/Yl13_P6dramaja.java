@@ -12,45 +12,60 @@ import lib.TextIO;
 //kus t‰ish‰‰likud on kıik omal kohal.
 public class Yl13_P6dramaja {
 	
+	//Meetod, mis annab vastuse, kas on t‰ish‰‰lik vıi mitte.
 	public static boolean onTaishaalik(String taht) {  //char oli siin enne.
 		return "aeiouı‰ˆ¸".contains(String.valueOf(taht));   //Siin String oli sama.
 	}
 	
-	public static String leiaTaishaalikudLaulust(String laul) {
-		return "Pıdral maja metsa sees...".contains(onTaishaalik(laul));
+	//Asendab t‰ish‰‰likud laulu sees
+	public static String asendaTaishaalikud(String laul, char taht) {
+		
+//		laul = "Pıdral maja metsa sees, \nv‰iksest aknast v‰lja vaatab...";
+		char laulCharTyyp = laul.charAt(0); 
+		
+		System.out.print("Sisesta t‰ish‰‰lik: ");
+		String taishaalik = TextIO.getlnString();
+		
+		boolean isDigit = taishaalik.matches("\\d{1}");  //Kas on t‰ht? kontrollimine.
+		taht = taishaalik.charAt(0);   //Teeme String-i char-ks, kuna replace meetod nıuab seda.
+		
+		while (true) {   // "lıputu" ts¸kkel
+			isDigit = taishaalik.matches("\\d{1}");  //Ts¸kli p‰rast peame siin uuesti v‰‰rtustama.
+			
+			//T‰ish‰‰liku kontroll
+			if (onTaishaalik(taishaalik) == false && isDigit == false) { // 
+				System.out.print("Sisesta t‰ish‰‰lik uuesti: ");
+				taishaalik = TextIO.getlnString();
+				
+			//Kui sisestame numbri t‰ish‰‰liku asemel.
+			} else if (isDigit == true) {
+				System.out.println("Prindime v‰lja kogu laulu!");   //Prindime v‰lja kogu laulu.
+				return laul;   //Katkestame programmi tˆˆ.
+				
+			} else if (onTaishaalik(taishaalik) == true){   //Muul tingimusel asendame laulusınad ‰ra.
+				System.out.println("Muuda t‰hed!");
+				String tulemusAsendatud = laul.replace(laulCharTyyp, taht);
+				return tulemusAsendatud;
+			}
+		}
+		//Kui laul contains taishaalik siis asenda t‰ish‰‰likud.
+		//Annab tulemuseks vastuse mingisuguse kas tavalise laulu vıi asendatud laulu.
+		
+//		boolean boolll = true;
+//		String str = String.valueOf(boovar);
+		
+//		return laul.contains(String.valueOf(onTaishaalik(laul)));
 	}
+	//Main-is tr¸kime v‰lja vastuse ja 
 	
 	public static void main(String[] args) 
 	{
+		String lugu = "Pıdral maja metsa sees, \nv‰iksest aknast v‰lja vaatab...";
+		System.out.println(asendaTaishaalikud(lugu,'a'));
+		
 		//Regulaaravaldisi
 //		boolean isChar = character.matches("[a-zA-z]{1}");
 //		boolean isDigit = character.matches("\\d{1}"); 
-		
-		String lugu = "Pıdral maja metsa sees...";
-		System.out.println("Sisesta t‰ish‰‰lik: ");
-		String taishaalik = TextIO.getlnString();
-		boolean isDigit = taishaalik.matches("\\d{1}");
-		
-		while (true) {   // "lıputu" ts¸kkel
-			isDigit = taishaalik.matches("\\d{1}");
-			
-			//T‰ish‰‰liku kontroll
-			if (onTaishaalik(taishaalik) == false && isDigit == false) {
-				System.out.println("Sisesta t‰ish‰‰lik uuesti: ");
-				taishaalik = TextIO.getlnString();
-			
-			//Kui sisestame midagi muud kui t‰ish‰‰liku.
-			} else if (isDigit == true) {
-				System.out.println(lugu);
-				break;
-			}
-			
-			else {   //Muul juhul asendame laulusınad ‰ra.
-				System.out.println("Muuda t‰hed!");
-				System.out.format(lugu.replace(leiaTaishaalikudLaulust(lugu), taishaalik));
-				break;
-			}
-		}
 		
 		//replace
 //		System.out.println(onTaishaalik('a'));

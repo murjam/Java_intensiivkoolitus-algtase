@@ -12,32 +12,35 @@ public class Yl8_Tulpdiagramm {
     //3 xxx
 	//8 xxxxxxxx
 	//11 xxxxxxxxxxx
-	public static void main(String[] args) 
-	{
-		String tulemus = "";
-		char taht = 'X';
+	public static int sisestatudArv(String tulemus, char taht) {
 		
 		System.out.println("Sisesta arv: ");
-		int sisestatudArv = TextIO.getlnInt();
 		
-		//Veatöötlus ja veateade, meil vaja while, kuna asi peab tsüklisse jääma.
-		while (true) {  //sisestatudArv < 0 || sisestatudArv != 0
+		while (true) {
+			int sisestatudArv = TextIO.getlnInt();
+			
 			if (sisestatudArv < 0) {
-				System.out.print("Negatiivsed arvud pole lubatud.\n");
-				sisestatudArv = TextIO.getlnInt();
-				
-			} else {
-				for (int i = 0; i < sisestatudArv; i++) {
-					tulemus = tulemus + taht;
+				System.out.print("Negatiivsed arvud pole lubatud. \nSisesta uus arv: \n");
+			}
+			
+			else if (sisestatudArv >= 0) {
+				if (sisestatudArv != 0) {
+					for (int i = 0; i < sisestatudArv; i++) {
+						tulemus = tulemus + taht;
+					}
+					System.out.format("%s", sisestatudArv + " " + tulemus + " \n");
+					tulemus = "";
+
+				} else {
+					return sisestatudArv;
 				}
-//				System.out.format("%5d", tulemus);
-				System.out.print(" " + tulemus + "\n");
-				tulemus = "";
-				
-//				System.out.print(" \nArv pole 0, sisesta uuesti: ");
-				sisestatudArv = TextIO.getlnInt();
 			}
 		}
-		System.out.println("\nMe jõudsime lõpuks nulli!");
+	}
+	
+	public static void main(String[] args) {
+		
+		sisestatudArv("", 'X');
+		System.out.println(" - Kasutaja jõudis nulli!");  //sisestatudArv("", 'X')
 	}
 }

@@ -11,17 +11,23 @@ public class Yl10_KullV6iKiri {
 		int min = 0;
 		int max = 1;
 		
-		System.out.println("Sisesta, kas tuleb kull (0) või kiri (1)");
+		System.out.print("Sisesta, kas tuleb kull (0) või kiri (1): ");
 		int arvSisestatud = TextIO.getlnInt();
+		
+		while (arvSisestatud < 0 || arvSisestatud > 1) {
+			System.out.print("Sisesta arv uuesti, peab olema 0 või 1: ");
+			arvSisestatud = TextIO.getlnInt();
+		}
 		
 		//Lühidalt randomi genereerimine.
 		int tulemusSuvaline = (int) (Math.random() * (max - min + 1)) + min;  //Castime int-i.
 		
 		if (arvSisestatud == tulemusSuvaline) {
-			System.out.print("\nArvasid õigesti! \nTuli " + tulemusSuvaline);
+			System.out.print("\nSisestasid " + arvSisestatud + ". Arvasid õigesti! \nTuli " + tulemusSuvaline);
 		} else {
-			System.out.print("\nArvasid valesti! \nTuli " + tulemusSuvaline); 
+			System.out.print("\nSisestasid " + arvSisestatud + ". Arvasid valesti! \nTuli " + tulemusSuvaline); 
 		}
+		
 		System.out.format(" ehk %s", 0 == tulemusSuvaline % 2 ? "kull." : "kiri.");
 	}
 }

@@ -17,7 +17,7 @@ public class Yl2_Sportlased implements Comparable<Yl2_Sportlased> {   //extends 
     //static Double maailmaRekord;
     //static - on kõikidele sportlastele.
     
-  //Konstruktor, saab ka automaatselt genereerida.
+    //Konstruktor, saab ka automaatselt genereerida.
     public Yl2_Sportlased(String nimi, double tulemus) {
 		this.nimi = nimi;   //viitan just sellele nimele ehk sellele muutujale seal, kuna tekib nime konflikt.
 		this.tulemus = tulemus;

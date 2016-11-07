@@ -5,13 +5,12 @@ public class Yl14_Paaritu0kuni30 {
 	public static void main(String[] args) {
 		
 		for (int alates = 0; alates <= 30; alates++) {
-
-			System.out.print(0 == alates % 2 ? "" : alates + ", ");
-			
-			if (alates == 30) {
-				//Kuidas saada viimane koma minema? äkki .lastIndexOf(", ") abil?
-				
+			if (0 != alates % 2) {
+				//Koma lisamine lahendatakse siin eraldi.
+				System.out.print(alates != 0 && alates != 1 ? ", " : "");
+				System.out.print(alates);
 			}
 		}
+		
 	}
 }
